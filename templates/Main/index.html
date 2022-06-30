@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather by team 1.5</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'sun.png' %}">
+</head>
+<body>
+    {% load static %}
+{#    <div class="intro">#}
+{#        <div class="video">#}
+{#            <video class="video__media" src="{% static 'night_cloudy.mp4' %}"#}
+{#                   autoplay muted loop></video>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="imag">
+        <div class="image">
+            <img class="imagee"  src="{% static 'nightSky.png' %}">
+        </div>
+    </div>
+    <div class="Figures">
+        <div class="Rectangle1">
+            {{ info.current_time }}
+        </div>
+        <div class="Rectangle2">
+            <div class="City_searched">
+                Ваше місто: {{ info.city }} </br>
+                <img src="http://openweathermap.org/img/wn/{{ info.icon }}.png">
+            </div>
+        </div>
+        <div class="Rectangle3">
+        </div>
+        <div class="Rectangle4">
+            <div class="City_info">
+                Температура в місті {{ info.city }}: {{ info.temp }} </br>
+            </div>
+        </div>
+        <div class="Rectangle5">
+        </div>
+    </div>
+
+</body>
+</html>

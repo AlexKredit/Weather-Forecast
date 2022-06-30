@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Calibri, sans-serif;
+    background-color: #1D1F2A;
+}
+
+.Rectangle1{
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    left: 175px;
+    top: 600px;
+    background: rgba(31, 35, 43, 1);
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.City_info {
+    position: absolute;
+    font-size: 15px;
+    font-family: Franklin Gothic, sans-serif;
+    color: #eeeeee;
+    left: 20px;
+    top: 20px;
+}
+.City_searched {
+    position: absolute;
+    font-size: 10px;
+    font-family: Franklin Gothic, sans-serif;
+    color: #eeeeee;
+    left: 20px;
+    top: 20px;
+}
+
+.City_time {
+
+}
+
+.Rectangle2{
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    left: 575px;
+    top: 600px;
+    background: rgba(31, 35, 43, 1);
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.Rectangle3{
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    left: 975px;
+    top: 600px;
+    background: rgba(31, 35, 43, 1);
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.Rectangle4{
+    position: absolute;
+    width: 330px;
+    height: 500px;
+    left: 1375px;
+    top: 430px;
+    background: rgba(31, 35, 43, 1);
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.Rectangle5{
+    position: absolute;
+    width: 730px;
+    height: 200px;
+    left: 575px;
+    top: 1000px;
+    background: rgba(31, 35, 43, 1);
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+/*.intro{*/
+/*    max-height: 100vh;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.video{*/
+/*    position: relative;*/
+/*    padding-bottom: 56.25%;*/
+/*}*/
+
+/*.video__media {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*}*/
+.imag{
+        max-height: 100vh;
+        overflow: hidden;
+}
+.image{
+        position: relative;
+        padding-bottom: 56.25%;
+}
+.imagee{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+}
