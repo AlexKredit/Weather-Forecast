@@ -22,19 +22,23 @@ body {
     left: 20px;
     top: 20px;
 }
+
 .City_searched {
     position: absolute;
     font-size: 10px;
     font-family: Franklin Gothic, sans-serif;
     color: #eeeeee;
     left: 20px;
+    top: 68px;
+}
+.City_date {
+    position: absolute;
+    font-size: 60px;
+    font-family: Franklin Gothic, sans-serif;
+    color: #eeeeee;
+    left: 20px;
     top: 20px;
 }
-
-.City_time {
-
-}
-
 .Rectangle2{
     position: absolute;
     width: 330px;
