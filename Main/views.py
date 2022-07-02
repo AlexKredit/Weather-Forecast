@@ -6,7 +6,7 @@ import datetime as dt
 def index(request):
     appid = '053c98c9c0a3368f0e8cd2db240f3c91'
     url = 'https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&exclude=current&lang=ua&appid=' + appid
-    city = 'Измаил'
+    city = 'Каланчак'
     res = requests.get(url.format(city)).json()
 
     city_info = {

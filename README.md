@@ -1,1 +1,1 @@
-# Weather-Forecast by ONU Students
+# Weather-Forecast
