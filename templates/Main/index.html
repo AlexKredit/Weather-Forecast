@@ -21,18 +21,51 @@
 
     <div class="imag">
         <div class="image">
-            <img class="imagee"  src="{% static 'nightSky.png' %}">
+            <img class="imagee"  src="{% static 'daySky.png' %}">
+        </div>
+    </div>
+    <div class="Central_info">
+        {{ info.temp }}°C </br>
+        <div class="cityCentral">
+            {{ info.city }}, {{ info.country }}
+        </div>
+        <div class="weatherTypeCentral">
+            {{ info.weatherType }}
+            <img src="https://openweathermap.org/img/wn/{{ info.icon }}.png" alt="Фото погоды">
         </div>
     </div>
     <div class="Figures">
         <div class="Rectangle1">
-            <div class="City_date">
+            <div class="City_time">
                 {{ info.current_time }}
+            </div>
+            <div class="City_date">
+                {{ info.current_date }}
+            </div>
+            <div class="Sunrise_txt">
+                Sunrise:
+            </div>
+            <div class="Sunrise_time">
+                </br> {{ info.sunrise_time }} </br>
+            </div>
+            <div class="Sunset_txt">
+                Sunset:
+            </div>
+            <div class="Sunset_time">
+                </br> {{ info.sunset_time }} </br>
             </div>
         </div>
         <div class="Rectangle2">
+            <div class="City_searched_txt">
+                Your city:
+            </div>
             <div class="City_searched">
-                Your city: {{ info.city }} </br>
+                {{ info.city }} </br>
+            </div>
+            <div class="SearchRectangle">
+                <div class="SearchText">
+                    Enter city
+                </div>
             </div>
         </div>
         <div class="Rectangle3">
@@ -40,13 +73,48 @@
         </div>
         <div class="Rectangle4">
             <div class="City_info">
-                City: {{ info.city }} </br>
-                Temperature: {{ info.temp }} </br>
-                <img src="https://openweathermap.org/img/wn/{{ info.icon }}.png">
+{#                City: {{ info.city }}, {{ info.country }} </br>#}
+{#                Temperature: {{ info.temp }}°C </br>#}
+                <div class="Feels_like_temp_txt">
+                    Feels like:
+                </div>
+                <div class="Feels_like_temp">
+                    </br> {{ info.temp_feels_like }}°C </br>
+                </div>
+
+                <div class="Weather_inf_txt">
+                    Weather:
+                </div>
+                <div class="Weather_inf">
+                    </br> {{ info.weatherTypeFull }} </br>
+                </div>
+{#                <div class="weatherIcon">#}
+{#                    <img src="https://openweathermap.org/img/wn/{{ info.icon }}.png" alt="Фото погоды">#}
+{#                </div>#}
+                <div class="Wind_spd_info_txt">
+                    Wind speed:
+                </div>
+                <div class="Wind_spd_info">
+                    </br>{{ info.wind_speed }} m/sec </br>
+                </div>
+
+                <div class="Humidity_info_txt">
+                    Humidity:
+                </div>
+                <div class="Humidity_info">
+                    </br>{{ info.humidity }} % </br>
+                </div>
+
+                <div class="Pressure_info_txt">
+                    Pressure:
+                </div>
+                <div class="Pressure_info">
+                    </br>{{ info.pressure }}mbar </br>
+                </div>
             </div>
         </div>
-        <div class="Rectangle5">
-        </div>
+{#        <div class="Rectangle5">#}
+{#        </div>#}
     </div>
 
 </body>

@@ -1,8 +1,27 @@
 body {
     margin: 0;
-    font-family: Calibri, sans-serif;
+    font-family: Franklin Gothic, sans-serif;
     background-color: #1D1F2A;
 }
+    .Central_info {
+        position: absolute;
+        font-size: 100px;
+        color: #eeeeee;
+        left: 900px;
+        top: 300px;
+    }
+    .cityCentral {
+        position: center;
+        font-size: 33px;
+        left: 0px;
+        top: 0px;
+    }
+    .weatherTypeCentral {
+        position: center;
+        font-size: 33px;
+        left: 0px;
+        top: 0px;
+    }
 
 .Rectangle1{
     position: absolute;
@@ -10,74 +29,210 @@ body {
     height: 330px;
     left: 175px;
     top: 600px;
-    background: rgba(31, 35, 43, 1);
-    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
-.City_info {
-    position: absolute;
-    font-size: 15px;
-    font-family: Franklin Gothic, sans-serif;
-    color: #eeeeee;
-    left: 20px;
-    top: 20px;
-}
 
-.City_searched {
-    position: absolute;
-    font-size: 10px;
-    font-family: Franklin Gothic, sans-serif;
-    color: #eeeeee;
-    left: 20px;
-    top: 68px;
-}
-.City_date {
-    position: absolute;
-    font-size: 60px;
-    font-family: Franklin Gothic, sans-serif;
-    color: #eeeeee;
-    left: 20px;
-    top: 20px;
-}
+    .City_time {
+        position: absolute;
+        opacity: 1;
+        font-size: 60px;
+        color: #eeeeee;
+        left: 20px;
+        top: 20px;
+    }
+    .City_date {
+        position: absolute;
+        opacity: 0.8;
+        font-size: 25px;
+        color: #eeeeee;
+        left: 20px;
+        top: 80px;
+    }
+    .Sunrise_txt {
+        position: absolute;
+        color: #eeeeee;
+        left: 20px;
+        top: 250px;
+        opacity: 0.8;
+        font-family: Calibri, sans-serif;
+    }
+    .Sunrise_time {
+        position: absolute;
+        color: #eeeeee;
+        left: 20px;
+        top: 250px;
+    }
+    .Sunset_txt {
+        position: absolute;
+        color: #eeeeee;
+        left: 260px;
+        top: 250px;
+        opacity: 0.8;
+        font-family: Calibri, sans-serif;
+    }
+    .Sunset_time {
+        position: absolute;
+        color: #eeeeee;
+        left: 266px;
+        top: 250px;
+    }
 .Rectangle2{
     position: absolute;
     width: 330px;
     height: 330px;
     left: 575px;
     top: 600px;
-    background: rgba(31, 35, 43, 1);
-    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
-
+    .SearchRectangle{
+        position: absolute;
+        width: 300px;
+        height: 30px;
+        left: 15px;
+        top: 30px;
+        background: rgba(193, 193, 193, 0.2);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+    }
+    .SearchText {
+        position: absolute;
+        font-size: 15px;
+        color: #eeeeee;
+        opacity: 0.4;
+        font-family: Calibri, sans-serif;
+        left: 10px;
+        top: 5px;
+    }
+    .City_searched {
+        position: absolute;
+        font-size: 15px;
+        color: #eeeeee;
+        font-family: Calibri, sans-serif;
+        left: 80px;
+        top: 68px;
+    }
+    .City_searched_txt {
+        position: absolute;
+        font-size: 15px;
+        color: #eeeeee;
+        opacity: 0.8;
+        font-family: Calibri, sans-serif;
+        left: 20px;
+        top: 68px;
+    }
 .Rectangle3{
     position: absolute;
     width: 330px;
     height: 330px;
     left: 975px;
     top: 600px;
-    background: rgba(31, 35, 43, 1);
-    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.15);
+    /*opacity: 0.5;*/
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
 
 .Rectangle4{
     position: absolute;
     width: 330px;
-    height: 500px;
+    height: 330px;
+    /*height: 500px;*/
     left: 1375px;
-    top: 430px;
-    background: rgba(31, 35, 43, 1);
-    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
+    top: 600px;
+    /*top: 430px;*/
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
+    .Feels_like_temp_txt {
+        position: absolute;
+        opacity: 0.8;
+        font-size: 20px;
+        font-family: Calibri, sans-serif;
+        top: 10px;
+    }
+    .Feels_like_temp {
+         position: absolute;
+         top: 2px;
+     }
+
+    .Weather_inf_txt {
+        position: absolute;
+        left: 180px;
+        opacity: 0.8;
+        font-size: 20px;
+        font-family: Calibri, sans-serif;
+        top: 10px;
+    }
+    .Weather_inf {
+        position: relative;
+        top: 2px;
+        left: 180px;
+    }
+
+    .Wind_spd_info_txt{
+        position: relative;
+        top: 50px;
+        left: 0px;
+        opacity: 0.8;
+        font-size: 20px;
+        font-family: Calibri, sans-serif;
+    }
+    .Wind_spd_info{
+         position: relative;
+         top: 20px;
+         left: 0px;
+     }
+
+
+    .Humidity_info_txt{
+        position: absolute;
+        top: 105px;
+        left: 180px;
+        opacity: 0.8;
+        font-size: 20px;
+        font-family: Calibri, sans-serif;
+    }
+    .Humidity_info{
+         position: relative;
+         top: -37px;
+         left: 180px;
+     }
+
+
+    .Pressure_info_txt{
+        position: absolute;
+        top: 200px;
+        left: 0px;
+        opacity: 0.8;
+        font-size: 20px;
+        font-family: Calibri, sans-serif;
+    }
+    .Pressure_info{
+         position: relative;
+         top: 0px;
+         left: 0px;
+     }
+
+
+    .City_info {
+        position: absolute;
+        font-size: 25px;
+        color: #eeeeee;
+        left: 20px;
+        top: 20px;
+    }
 .Rectangle5{
     position: absolute;
     width: 730px;
     height: 200px;
     left: 575px;
     top: 1000px;
-    background: rgba(31, 35, 43, 1);
+    /*background: rgba(31, 35, 43, 1);*/
     box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
