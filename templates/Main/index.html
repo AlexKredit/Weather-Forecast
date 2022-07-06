@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="{% static 'Weather icon.png' %}">
 </head>
 <body>
+
     {% load static %}
 {#    <div class="intro">#}
 {#        <div class="video">#}
@@ -21,17 +22,18 @@
 
     <div class="imag">
         <div class="image">
-            <img class="imagee"  src="{% static 'daySky.png' %}">
+            <img class="imagee"  src="{% static 'nightSky.png' %}" alt="Задний фон">
         </div>
     </div>
     <div class="Central_info">
-        {{ info.temp }}°C </br>
+        {{ info.temp }}°C <br>
         <div class="cityCentral">
             {{ info.city }}, {{ info.country }}
         </div>
         <div class="weatherTypeCentral">
             {{ info.weatherType }}
             <img src="https://openweathermap.org/img/wn/{{ info.icon }}.png" alt="Фото погоды">
+{#            <img src="{{ info.icon }}" alt="Фото погоды">#}
         </div>
     </div>
     <div class="Figures">
@@ -46,13 +48,13 @@
                 Sunrise:
             </div>
             <div class="Sunrise_time">
-                </br> {{ info.sunrise_time }} </br>
+                <br> {{ info.sunrise_time }} <br>
             </div>
             <div class="Sunset_txt">
                 Sunset:
             </div>
             <div class="Sunset_time">
-                </br> {{ info.sunset_time }} </br>
+                <br> {{ info.sunset_time }} <br>
             </div>
         </div>
         <div class="Rectangle2">
@@ -60,62 +62,50 @@
                 Your city:
             </div>
             <div class="City_searched">
-                {{ info.city }} </br>
+                {{ info.city }} <br>
             </div>
-            <div class="SearchRectangle">
-                <div class="SearchText">
-                    Enter city
-                </div>
+            <div class="text-field">
+                <form action="" method="get">
+                    <label class="text-field__label" for="name"></label>
+                    <input class="text-field__input" type="text" id="name" name="name"
+                           placeholder="Enter city">
+                    <input class="text-field__search" id="city" type="submit" value="Find">
+                </form>
             </div>
         </div>
         <div class="Rectangle3">
-
+            {{ info_forecast.list }}
         </div>
         <div class="Rectangle4">
             <div class="City_info">
-{#                City: {{ info.city }}, {{ info.country }} </br>#}
-{#                Temperature: {{ info.temp }}°C </br>#}
                 <div class="Feels_like_temp_txt">
                     Feels like:
                 </div>
                 <div class="Feels_like_temp">
-                    </br> {{ info.temp_feels_like }}°C </br>
+                    <br> {{ info.temp_feels_like }}°C <br>
                 </div>
-
-                <div class="Weather_inf_txt">
-                    Weather:
-                </div>
-                <div class="Weather_inf">
-                    </br> {{ info.weatherTypeFull }} </br>
-                </div>
-{#                <div class="weatherIcon">#}
-{#                    <img src="https://openweathermap.org/img/wn/{{ info.icon }}.png" alt="Фото погоды">#}
-{#                </div>#}
                 <div class="Wind_spd_info_txt">
                     Wind speed:
                 </div>
                 <div class="Wind_spd_info">
-                    </br>{{ info.wind_speed }} m/sec </br>
+                    <br>{{ info.wind_speed }}m/sec <br>
                 </div>
 
                 <div class="Humidity_info_txt">
                     Humidity:
                 </div>
                 <div class="Humidity_info">
-                    </br>{{ info.humidity }} % </br>
+                    <br>{{ info.humidity }}% <br>
                 </div>
 
                 <div class="Pressure_info_txt">
                     Pressure:
                 </div>
                 <div class="Pressure_info">
-                    </br>{{ info.pressure }}mbar </br>
+                    <br>{{ info.pressure }}mbar <br>
                 </div>
             </div>
         </div>
-{#        <div class="Rectangle5">#}
-{#        </div>#}
     </div>
-
 </body>
 </html>

@@ -13,14 +13,14 @@ body {
     .cityCentral {
         position: center;
         font-size: 33px;
-        left: 0px;
-        top: 0px;
+        left: -0px;
+        top: -0px;
     }
     .weatherTypeCentral {
         position: center;
         font-size: 33px;
-        left: 0px;
-        top: 0px;
+        left: -0px;
+        top: -0px;
     }
 
 .Rectangle1{
@@ -30,7 +30,7 @@ body {
     left: 175px;
     top: 600px;
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
 
@@ -85,18 +85,56 @@ body {
     left: 575px;
     top: 600px;
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
-    .SearchRectangle{
+    .text-field__input{
         position: absolute;
         width: 300px;
         height: 30px;
-        left: 15px;
+        left: 12px;
         top: 30px;
-        background: rgba(193, 193, 193, 0.2);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+        font-family: Calibri, sans-serif;
+        font-size: 15px;
+        text-indent: 7px;
+        color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
         border-radius: 20px;
+        border: 1px solid #E7E7E7;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    .text-field__input::placeholder{
+        color: #eeeeee;
+        opacity: 0.4;
+    }
+    .text-field__input:focus {
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        border-color: #DDDDDD;
+        outline: 0;
+    }
+    .text-field__input[type="search"]::-webkit-search-decoration,
+    .text-field__input[type="search"]::-webkit-search-cancel-button,
+    .text-field__input[type="search"]::-webkit-search-results-button,
+    .text-field__input[type="search"]::-webkit-search-results-decoration {
+        -webkit-appearance: none;
+    }
+    .text-field__search {
+        position: absolute;
+        background-color: rgba(193, 193, 193, 0);
+        border-radius: 20px;
+        left: 270px;
+        top: 38px;
+        font-family: Calibri, sans-serif;
+        color: #eeeeee;
+        cursor: pointer;
+        border: 1px;
+        outline: 0;
+    }
+    .text-field__search:hover {
+        color: #1b1b1b;
     }
     .SearchText {
         position: absolute;
@@ -109,21 +147,22 @@ body {
     }
     .City_searched {
         position: absolute;
-        font-size: 15px;
+        font-size: 22px;
         color: #eeeeee;
         font-family: Calibri, sans-serif;
-        left: 80px;
+        left: 105px;
         top: 68px;
     }
     .City_searched_txt {
         position: absolute;
-        font-size: 15px;
+        font-size: 22px;
         color: #eeeeee;
         opacity: 0.8;
         font-family: Calibri, sans-serif;
         left: 20px;
         top: 68px;
     }
+
 .Rectangle3{
     position: absolute;
     width: 330px;
@@ -131,8 +170,7 @@ body {
     left: 975px;
     top: 600px;
     background: rgba(255, 255, 255, 0.15);
-    /*opacity: 0.5;*/
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
 
@@ -140,12 +178,10 @@ body {
     position: absolute;
     width: 330px;
     height: 330px;
-    /*height: 500px;*/
     left: 1375px;
     top: 600px;
-    /*top: 430px;*/
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
     border-radius: 20px;
 }
     .Feels_like_temp_txt {
@@ -160,64 +196,49 @@ body {
          top: 2px;
      }
 
-    .Weather_inf_txt {
-        position: absolute;
-        left: 180px;
-        opacity: 0.8;
-        font-size: 20px;
-        font-family: Calibri, sans-serif;
-        top: 10px;
-    }
-    .Weather_inf {
-        position: relative;
-        top: 2px;
-        left: 180px;
-    }
-
     .Wind_spd_info_txt{
         position: relative;
-        top: 50px;
-        left: 0px;
+        top: 100px;
+        left: -0px;
         opacity: 0.8;
         font-size: 20px;
         font-family: Calibri, sans-serif;
     }
     .Wind_spd_info{
-         position: relative;
-         top: 20px;
-         left: 0px;
+         position: absolute;
+         top: 90px;
+         left: -0px;
      }
 
 
     .Humidity_info_txt{
         position: absolute;
-        top: 105px;
-        left: 180px;
+        top: 10px;
+        left: 150px;
         opacity: 0.8;
         font-size: 20px;
         font-family: Calibri, sans-serif;
     }
     .Humidity_info{
-         position: relative;
-         top: -37px;
-         left: 180px;
+         position: absolute;
+         top: 2px;
+         left: 150px;
      }
 
 
     .Pressure_info_txt{
         position: absolute;
-        top: 200px;
-        left: 0px;
+        top: 100px;
+        left: 150px;
         opacity: 0.8;
         font-size: 20px;
         font-family: Calibri, sans-serif;
     }
     .Pressure_info{
-         position: relative;
-         top: 0px;
-         left: 0px;
+         position: absolute;
+         top: 90px;
+         left: 150px;
      }
-
 
     .City_info {
         position: absolute;
@@ -226,16 +247,6 @@ body {
         left: 20px;
         top: 20px;
     }
-.Rectangle5{
-    position: absolute;
-    width: 730px;
-    height: 200px;
-    left: 575px;
-    top: 1000px;
-    /*background: rgba(31, 35, 43, 1);*/
-    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
 /*.intro{*/
 /*    max-height: 100vh;*/
 /*    overflow: hidden;*/
