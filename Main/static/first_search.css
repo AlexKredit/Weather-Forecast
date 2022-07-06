@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: Franklin Gothic, sans-serif;
+}
+.logo{
+    position: absolute;
+    left: 915px;
+    top: 180px;
+}
+.text-field {
+    position: absolute;
+    left: 800px;
+    top: 300px;
+}
+.text-field__label {
+    position: relative;
+    left: 21px;
+    font-family: Calibri, sans-serif;
+    color: #000000;
+    opacity: 0.8;
+}
+.text-field__input{
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 12px;
+    top: 30px;
+    font-family: Calibri, sans-serif;
+    font-size: 15px;
+    text-indent: 7px;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(193, 193, 193, 0.2);
+    box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    border: 1px solid #E7E7E7;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.text-field__input::placeholder{
+    color: #000000;
+    opacity: 0.4;
+}
+.text-field__input:focus {
+    background-color: rgba(193, 193, 193, 0.2);
+    box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    border-color: #DDDDDD;
+    outline: 0;
+}
+.text-field__input[type="search"]::-webkit-search-decoration,
+.text-field__input[type="search"]::-webkit-search-cancel-button,
+.text-field__input[type="search"]::-webkit-search-results-button,
+.text-field__input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+.text-field__search {
+    position: absolute;
+    background-color: rgba(193, 193, 193, 0);
+    border-radius: 20px;
+    left: 270px;
+    top: 38px;
+    font-family: Calibri, sans-serif;
+    color: #000000;
+    cursor: pointer;
+    border: 1px;
+    outline: 0;
+}
+.text-field__search:hover {
+    color: #aaaaaa;
+}

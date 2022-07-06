@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather by team 1.5</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'first_search.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'weatherpic.png' %}">
+
+</head>
+<body>
+<div class="text-field">
+    <form action="{% url 'index' %}" method="get">
+            <label class="text-field__label" for="name">Enter your desired city</label>
+            <input class="text-field__input" type="text" id="name" name="name"
+                   placeholder="Enter city" >
+            <input class="text-field__search" id="city" type="submit" value="Find">
+    </form>
+</div>
+<img class="logo"  src="{% static 'weatherpic.png' %} " width = 5% alt="Лого">
+</body>
+</html>

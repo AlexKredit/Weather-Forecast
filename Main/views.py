@@ -4,6 +4,11 @@ import datetime as dt
 from Main.models import City
 
 
+def first_search(request):
+    return render(request, 'Main/first_search.html')
+
+
+# class WeatherPage(TemplateView):
 def toFixed(numObj, digits=0):
     return f"{numObj:.{digits}f}"
 
@@ -21,7 +26,8 @@ def index(request):
     lang = "en"
 
     url_current = base_url_current + '{}&units=metric&exclude=current' + '&lang=' + lang + '&appid=' + appid
-    url_forecast = base_url_forecast + '{}&units=metric&exclude=hourly, daily&cnt=8' + '&lang=' + lang + '&appid=' + appid
+    url_forecast = base_url_forecast + '{}&units=metric&exclude=hourly, daily&cnt=8' + \
+                   '&lang=' + lang + '&appid=' + appid
 
     for city in get_queryset(request):
         res_current = requests.get(url_current.format(city)).json()
@@ -55,7 +61,5 @@ def index(request):
             'temp': toFixed(res_forecast["list"][0]["main"]["temp"]),
             # 'list':
         }
-        context = {'info': city_info, 'info_forecast' : city_forecast_info}
+        context = {'info': city_info, 'info_forecast': city_forecast_info}
         return render(request, 'Main/index.html', context)
-
-
