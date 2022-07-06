@@ -8,7 +8,6 @@ def first_search(request):
     return render(request, 'Main/first_search.html')
 
 
-# class WeatherPage(TemplateView):
 def toFixed(numObj, digits=0):
     return f"{numObj:.{digits}f}"
 
