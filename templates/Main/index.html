@@ -14,6 +14,7 @@
     {% load static %}
     <div class="imag">
         <div class="image">
+
             {% if info.current_time >= info.sunrise_time or info.current_time <= info.sunset_time %}
                 {% if info.weatherType == 'Clear' %}
                 <img class="imagee"  src="{% static 'daySkyBG.png' %}" alt="Задний фон">
@@ -27,20 +28,20 @@
                     <img class="imagee_cl"  src="{% static 'dayClouds.png' %}" alt="Задний фон">
                 {% endif %}
                 {% if info.weatherTypeFull == 'overcast clouds'  %}
-                    <img class="imagee"  src="{% static 'overcastCloudsDay.png' %}" alt="Задний фон">
+                    <img class="imagee_cl"  src="{% static 'overcastCloudsDay.png' %}" alt="Задний фон">
                 {% endif %}
                 {% if info.weatherTypeFull == 'broken clouds'  %}
                     <img class="imagee"  src="{% static 'daySkyBG.png' %}" alt="Задний фон">
                     <img class="imagee_cl"  src="{% static 'brokenCloudsDay.png' %}" alt="Задний фон">
                 {% endif %}
                 {% if info.weatherType == 'Rain'  %}
-                    <video class="video__media"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
+                    <video class="imagee_cl"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
                 {% endif %}
                 {% if info.weatherType == 'Drizzle'  %}
-                    <video class="video__media"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
+                    <video class="imagee_cl"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
                 {% endif %}
                 {% if info.weatherType == 'Thunderstorm'  %}
-                    <video class="video__media"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
+                    <video class="imagee_cl"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
                 {% endif %}
             {% endif %}
 
@@ -60,21 +61,21 @@
                     <img class="imagee_cl"  src="{% static 'nightClouds.png' %}" alt="Задний фон">
                 {% endif %}
                 {% if info.weatherTypeFull == 'overcast clouds'  %}
-                    <img class="imagee"  src="{% static 'overcastCloudsNight.png' %}" alt="Задний фон">
+                    <img class="imagee_cl"  src="{% static 'overcastCloudsNight.png' %}" alt="Задний фон">
                 {% endif %}
                 {% if info.weatherTypeFull == 'broken clouds'  %}
                     <video class="video__media" src="{% static 'nightSkyBG.mp4' %}"
                            autoplay muted loop></video>
-                    <img class="imagee"  src="{% static 'brokenCloudsNight.png' %}" alt="Задний фон">
+                    <img class="imagee_cl"  src="{% static 'brokenCloudsNight.png' %}" alt="Задний фон">
                 {% endif %}
                 {% if info.weatherType == 'Rain'  %}
-                    <video class="video__media"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
+                    <video class="imagee_cl"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
                 {% endif %}
                 {% if info.weatherType == 'Drizzle'  %}
-                    <video class="video__media"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
+                    <video class="imagee_cl"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
                 {% endif %}
                 {% if info.weatherType == 'Thunderstorm'  %}
-                    <video class="video__media"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
+                    <video class="imagee_cl"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
                 {% endif %}
             {% endif %}
         </div>
@@ -128,37 +129,174 @@
             </div>
         </div>
         <div class="Rectangle3">
-            {{ info_forecast.wind_forecast }}
+                <div class="ForecastArea1">
+                    <div class="Date">
+                        {{ info_forecast.day1 }}
+                    </div>
+                    <div class="Max">
+                        {{ info_forecast.temp_Max1 }}/
+                    </div>
+                    <div class="Min">
+                        {{ info_forecast.temp_Min1 }}°C
+                    </div>
+                    <div class="WeatherPic">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon1 }}.png" alt="Фото погоды">
+                    </div>
+                    <div class="Weather">
+                        {{ info_forecast.weather1 }}
+                    </div>
+                </div>
+                <div class="ForecastArea2">
+                    <div class="Date">
+                        {{ info_forecast.day2 }}
+                    </div>
+                    <div class="Max">
+                        {{ info_forecast.temp_Max2 }}/
+                    </div>
+                    <div class="Min">
+                        {{ info_forecast.temp_Min2 }}°C
+                    </div>
+                    <div class="WeatherPic">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon2 }}.png" alt="Фото погоды">
+                    </div>
+                    <div class="Weather">
+                        {{ info_forecast.weather2 }}
+                    </div>
+                </div>
+                <div class="ForecastArea3">
+                    <div class="Date">
+                        {{ info_forecast.day3 }}
+                    </div>
+                    <div class="Max">
+                        {{ info_forecast.temp_Max3 }}/
+                    </div>
+                    <div class="Min">
+                        {{ info_forecast.temp_Min3 }}°C
+                    </div>
+                    <div class="WeatherPic">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon3 }}.png" alt="Фото погоды">
+                    </div>
+                    <div class="Weather">
+                        {{ info_forecast.weather3 }}
+                    </div>
+                </div>
+                <div class="ForecastArea4">
+                    <div class="Date">
+                        {{ info_forecast.day4 }}
+                    </div>
+                    <div class="Max">
+                        {{ info_forecast.temp_Max4 }}/
+                    </div>
+                    <div class="Min">
+                        {{ info_forecast.temp_Min4 }}°C
+                    </div>
+                    <div class="WeatherPic">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon4 }}.png" alt="Фото погоды">
+                    </div>
+                    <div class="Weather">
+                        {{ info_forecast.weather4 }}
+                    </div>
+                </div>
+                <div class="ForecastArea5">
+                    <div class="Date">
+                        {{ info_forecast.day5 }}
+                    </div>
+                    <div class="Max">
+                        {{ info_forecast.temp_Max5 }}/
+                    </div>
+                    <div class="Min">
+                        {{ info_forecast.temp_Min5 }}°C
+                    </div>
+                    <div class="WeatherPic">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon5 }}.png" alt="Фото погоды">
+                    </div>
+                    <div class="Weather">
+                        {{ info_forecast.weather5 }}
+                    </div>
+                </div>
         </div>
         <div class="Rectangle4">
-            <div class="City_info">
-                <div class="Feels_like_temp_txt">
+            <div class="InfoArea1">
+                <div class="InfoType">
                     Feels like:
                 </div>
-                <div class="Feels_like_temp">
-                    <br> {{ info.temp_feels_like }}°C <br>
-                </div>
-                <div class="Wind_spd_info_txt">
-                    Wind speed:
-                </div>
-                <div class="Wind_spd_info">
-                    <br>{{ info.wind_speed }}m/sec <br>
-                </div>
-
-                <div class="Humidity_info_txt">
-                    Humidity:
-                </div>
-                <div class="Humidity_info">
-                    <br>{{ info.humidity }}% <br>
-                </div>
-
-                <div class="Pressure_info_txt">
-                    Pressure:
-                </div>
-                <div class="Pressure_info">
-                    <br>{{ info.pressure }}mbar <br>
+                <div class="Info1">
+                    {{ info.temp_feels_like }}°C
                 </div>
             </div>
+            <div class="InfoArea2">
+                <div class="InfoType">
+                    Humidity:
+                </div>
+                <div class="Info1">
+                    {{ info.humidity }}%
+                </div>
+            </div>
+            <div class="InfoArea3">
+                <div class="InfoType">
+                    Cloudness:
+                </div>
+                <div class="Info3">
+                    {{ info.cloudness }}%
+                </div>
+            </div>
+            <div class="InfoArea4">
+                <div class="InfoType">
+                    Wind speed:
+                </div>
+                <div class="Info2">
+                    {{ info.wind_speed }}m/sec
+                </div>
+            </div>
+            <div class="InfoArea5">
+                <div class="InfoType">
+                    Pressure:
+                </div>
+                <div class="Info2">
+                    {{ info.pressure }}mbar
+                </div>
+            </div>
+{#            <div class="City_info">#}
+{#                <div class="Feels_like_temp_txt">#}
+{#                    Feels like:#}
+{#                </div>#}
+{#                <div class="Feels_like_temp">#}
+{#                    <br> {{ info.temp_feels_like }}°C <br>#}
+{#                </div>#}
+{##}
+{#                <div class="Wind_spd_info_txt">#}
+{#                    Wind speed:#}
+{#                </div>#}
+{#                <div class="Wind_spd_info">#}
+{#                    <br>{{ info.wind_speed }}m/sec <br>#}
+{#                </div>#}
+{##}
+{#                <div class="Humidity_info_txt">#}
+{#                    Humidity:#}
+{#                </div>#}
+{#                <div class="Humidity_info">#}
+{#                    <br>{{ info.humidity }}% <br>#}
+{#                </div>#}
+{##}
+{#                <div class="Pressure_info_txt">#}
+{#                    Pressure:#}
+{#                </div>#}
+{#                <div class="Pressure_info">#}
+{#                    <br>{{ info.pressure }}mbar <br>#}
+{#                </div>#}
+{#                <div class="Temp_min_txt">#}
+{#                    Temp min:#}
+{#                </div>#}
+{#                <div class="Temp_min">#}
+{#                    <br> {{ info.temp_min }}°C <br>#}
+{#                </div>#}
+{#                <div class="Temp_max_txt">#}
+{#                    Temp max:#}
+{#                </div>#}
+{#                <div class="Temp_max">#}
+{#                    <br> {{ info.temp_max }}°C <br>#}
+{#                </div>#}
+{#            </div>#}
         </div>
     </div>
 </body>
