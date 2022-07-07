@@ -25,7 +25,7 @@ def index(request):
     lang = "en"
 
     url_current = base_url_current + '{}&units=metric&exclude=current' + '&lang=' + lang + '&appid=' + appid
-    url_forecast = base_url_forecast + '{}&units=metric&exclude=hourly, daily&cnt=8' + \
+    url_forecast = base_url_forecast + '{}&units=metric&exclude=hourly&cnt=8' + \
                    '&lang=' + lang + '&appid=' + appid
 
     for city in get_queryset(request):
@@ -54,11 +54,13 @@ def index(request):
             'sunrise_time': sunrise_time_str,
             'sunset_time': sunset_time_str
         }
+        A = []
+
         for i in res_forecast['list']:
-            '{0:+3.0f}'.format(i['main']['temp']), i['main']['pressure'], i['main']['humidity'], i['wind']['speed']
+            A += toFixed(i['main']['temp'])
         city_forecast_info = {
             'temp': toFixed(res_forecast["list"][0]["main"]["temp"]),
-            # 'list':
+             'wind_forecast': A
         }
         context = {'info': city_info, 'info_forecast': city_forecast_info}
         return render(request, 'Main/index.html', context)

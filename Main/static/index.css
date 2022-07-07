@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Franklin Gothic, sans-serif;
-    background-color: #1D1F2A;
+    background-color: #1b1b1b;
 }
     .Central_info {
         position: absolute;
@@ -247,23 +247,23 @@ body {
         left: 20px;
         top: 20px;
     }
-/*.intro{*/
-/*    max-height: 100vh;*/
-/*    overflow: hidden;*/
-/*}*/
+.intro{
+    max-height: 100vh;
+    overflow: hidden;
+}
 
-/*.video{*/
-/*    position: relative;*/
-/*    padding-bottom: 56.25%;*/
-/*}*/
+.video{
+    position: relative;
+    padding-bottom: 56.25%;
+}
 
-/*.video__media {*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*}*/
+.video__media {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .imag{
         max-height: 100vh;
         overflow: hidden;
@@ -272,10 +272,27 @@ body {
         position: relative;
         padding-bottom: 56.25%;
 }
+
 .imagee{
         width: 100%;
         height: auto;
         position: absolute;
         top: 0;
         left: 0;
+}
+.imagee_cl {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: swimming 1.5s ease-in alternate-reverse;
+    animation-iteration-count: initial;
+}
+@keyframes swimming {
+ from{
+     top: 0;
+}
+to{
+    top: -30px;
+}
 }

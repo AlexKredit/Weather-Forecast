@@ -5,24 +5,78 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather by team 1.5</title>
+    <title>SimpleWeather</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
     <link rel="icon" type="image/png" href="{% static 'weatherpic.png' %}">
 </head>
 <body>
-
     {% load static %}
-{#    <div class="intro">#}
-{#        <div class="video">#}
-{#            <video class="video__media" src="{% static 'night_cloudy.mp4' %}"#}
-{#                   autoplay muted loop></video>#}
-{#        </div>#}
-{#    </div>#}
-
     <div class="imag">
         <div class="image">
-            <img class="imagee"  src="{% static 'nightSky.png' %}" alt="Задний фон">
+            {% if info.current_time >= info.sunrise_time or info.current_time <= info.sunset_time %}
+                {% if info.weatherType == 'Clear' %}
+                <img class="imagee"  src="{% static 'daySkyBG.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherTypeFull == 'few clouds'  %}
+                    <img class="imagee"  src="{% static 'daySkyBG.png' %}" alt="Задний фон">
+                    <img class="imagee_cl"  src="{% static 'dayClouds.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherTypeFull == 'scattered clouds'  %}
+                    <img class="imagee"  src="{% static 'daySkyBG.png' %}" alt="Задний фон">
+                    <img class="imagee_cl"  src="{% static 'dayClouds.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherTypeFull == 'overcast clouds'  %}
+                    <img class="imagee"  src="{% static 'overcastCloudsDay.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherTypeFull == 'broken clouds'  %}
+                    <img class="imagee"  src="{% static 'daySkyBG.png' %}" alt="Задний фон">
+                    <img class="imagee_cl"  src="{% static 'brokenCloudsDay.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherType == 'Rain'  %}
+                    <video class="video__media"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
+                {% endif %}
+                {% if info.weatherType == 'Drizzle'  %}
+                    <video class="video__media"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
+                {% endif %}
+                {% if info.weatherType == 'Thunderstorm'  %}
+                    <video class="video__media"  src="{% static 'dayRain.mp4' %}" autoplay muted loop></video>
+                {% endif %}
+            {% endif %}
+
+            {% if info.current_time >= info.sunset_time or info.current_time <= info.sunrise_time %}
+                {% if info.weatherType == 'Clear'  %}
+                <video class="video__media" src="{% static 'nightSkyBG.mp4' %}"
+                       autoplay muted loop></video>
+                {% endif %}
+                {% if info.weatherTypeFull == 'few clouds'  %}
+                    <video class="video__media" src="{% static 'nightSkyBG.mp4' %}"
+                           autoplay muted loop></video>
+                    <img class="imagee_cl"  src="{% static 'nightClouds.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherTypeFull == 'scattered clouds'  %}
+                    <video class="video__media" src="{% static 'nightSkyBG.mp4' %}"
+                           autoplay muted loop></video>
+                    <img class="imagee_cl"  src="{% static 'nightClouds.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherTypeFull == 'overcast clouds'  %}
+                    <img class="imagee"  src="{% static 'overcastCloudsNight.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherTypeFull == 'broken clouds'  %}
+                    <video class="video__media" src="{% static 'nightSkyBG.mp4' %}"
+                           autoplay muted loop></video>
+                    <img class="imagee"  src="{% static 'brokenCloudsNight.png' %}" alt="Задний фон">
+                {% endif %}
+                {% if info.weatherType == 'Rain'  %}
+                    <video class="video__media"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
+                {% endif %}
+                {% if info.weatherType == 'Drizzle'  %}
+                    <video class="video__media"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
+                {% endif %}
+                {% if info.weatherType == 'Thunderstorm'  %}
+                    <video class="video__media"  src="{% static 'nightRain.mp4' %}" autoplay muted loop></video>
+                {% endif %}
+            {% endif %}
         </div>
     </div>
     <div class="Central_info">
@@ -74,7 +128,7 @@
             </div>
         </div>
         <div class="Rectangle3">
-            {{ info_forecast.list }}
+            {{ info_forecast.wind_forecast }}
         </div>
         <div class="Rectangle4">
             <div class="City_info">
