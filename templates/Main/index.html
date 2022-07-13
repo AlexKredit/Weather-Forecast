@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SimpleWeather</title>
+    <title>Weathario</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
     <link rel="icon" type="image/png" href="{% static 'weatherpic.png' %}">
@@ -86,9 +86,14 @@
             {{ info.city }}, {{ info.country }}
         </div>
         <div class="weatherTypeCentral">
-            {{ info.weatherType }}
+            {{ info.weatherType }} <br> {{ info_forecast.temp_h1 }} <br> {{ info_forecast.time_h1 }}
             <img src="https://openweathermap.org/img/wn/{{ info.icon }}.png" alt="Фото погоды">
 {#            <img src="{{ info.icon }}" alt="Фото погоды">#}
+        </div>
+    </div>
+    <div>
+        <div class="3h_forecast">
+
         </div>
     </div>
     <div class="Figures">
@@ -234,10 +239,10 @@
             </div>
             <div class="InfoArea3">
                 <div class="InfoType">
-                    Cloudness:
+                    Cloudiness:
                 </div>
                 <div class="Info3">
-                    {{ info.cloudness }}%
+                    {{ info.cloudiness }}%
                 </div>
             </div>
             <div class="InfoArea4">
@@ -245,7 +250,7 @@
                     Wind speed:
                 </div>
                 <div class="Info2">
-                    {{ info.wind_speed }}m/sec
+                    {{ info.wind_speed }}&#160;m/sec
                 </div>
             </div>
             <div class="InfoArea5">
