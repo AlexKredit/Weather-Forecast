@@ -86,14 +86,124 @@
             {{ info.city }}, {{ info.country }}
         </div>
         <div class="weatherTypeCentral">
-            {{ info.weatherType }} <br> {{ info_forecast.temp_h1 }} <br> {{ info_forecast.time_h1 }}
-            <img src="https://openweathermap.org/img/wn/{{ info.icon }}.png" alt="Фото погоды">
+
 {#            <img src="{{ info.icon }}" alt="Фото погоды">#}
         </div>
     </div>
     <div>
         <div class="3h_forecast">
-
+            <div class="LeftRec">
+                <div class ="LeftRecInfoLeftTime">
+                    <div class = "RecInfo1Left">
+                        {{ info_forecast.time_h1 }}
+                    </div>
+                </div>
+                <div class = "FullInfoLeft">
+                    <div class = "LeftTemp1">
+                        {{ info_forecast.temp_h1 }}°C
+                    </div>
+                    <div class = "LeftIcon1">
+                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h1 }}.png" alt="Фото погоды">
+                    </div>
+                </div>
+                <div class = "LeftRecInfoRightTime">
+                    <div class = "RecInfo1Right">
+                        {{ info_forecast.time_h2 }}
+                    </div>
+                </div>
+                <div class = "FullInfoRight">
+                    <div class = "RightTemp2">
+                        {{ info_forecast.temp_h2 }}°C
+                    </div>
+                    <div class = "RightIcon2">
+                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h2 }}.png" alt="Фото погоды">
+                    </div>
+                </div>
+            </div>
+            <div class="LeftCentRec">
+                <div class ="LeftCentRecInfoLeftTime">
+                    <div class = "RecInfo3LeftCent">
+                        {{ info_forecast.time_h3 }}
+                    </div>
+                </div>
+                <div class = "FullInfoLeftCent">
+                    <div class = "LeftCentTemp3">
+                        {{ info_forecast.temp_h3 }}°C
+                    </div>
+                    <div class = "LeftCentIcon3">
+                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h3 }}.png" alt="Фото погоды">
+                    </div>
+                </div>
+                <div class = "LeftCentRecInfoRightTime">
+                    <div class = "RecInfo4RightCent">
+                        {{ info_forecast.time_h4 }}
+                    </div>
+                </div>
+                <div class = "FullInfoRightCent">
+                    <div class = "RightCentTemp4">
+                        {{ info_forecast.temp_h4 }}°C
+                    </div>
+                    <div class = "RightCentIcon4">
+                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h4 }}.png" alt="Фото погоды">
+                    </div>
+                </div>
+            </div>
+            <div class="RightCentRec">
+                <div class ="RightCentRecInfoLeftTime">
+                    <div class = "RecInfo5RightCent">
+                        {{ info_forecast.time_h5 }}
+                    </div>
+                </div>
+                <div class = "FullInfoRightCentRight5">
+                    <div class = "RightCentTemp5">
+                        {{ info_forecast.temp_h5 }}°C
+                    </div>
+                    <div class = "RightCentIcon5">
+                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h5 }}.png" alt="Фото погоды">
+                    </div>
+                </div>
+                <div class = "RightCentRecInfoRightTime">
+                    <div class = "RecInfo6RightCentRight">
+                        {{ info_forecast.time_h6 }}
+                    </div>
+                </div>
+                <div class = "FullInfoRightCentRight">
+                    <div class = "RightCentTemp6">
+                        {{ info_forecast.temp_h6 }}°C
+                    </div>
+                    <div class = "RightCentIcon6">
+                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h6 }}.png" alt="Фото погоды">
+                    </div>
+                </div>
+            </div>
+            <div class="RightRec">
+                <div class ="RightRecInfoLeftTime">
+                    <div class = "RecInfo7Left">
+                        {{ info_forecast.time_h7 }}
+                    </div>
+                </div>
+                <div class = "FullInfoRightLeft">
+                    <div class = "LeftTemp7">
+                        {{ info_forecast.temp_h7 }}°C
+                    </div>
+                    <div class = "LeftIcon7">
+                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h7 }}.png" alt="Фото погоды">
+                    </div>
+                </div>
+                <div class = "RightRecInfoRightTime">
+                    <div class = "RecInfo8Right">
+                        {{ info_forecast.time_h8 }}
+                    </div>
+                </div>
+                <div class = "FullInfoRightR">
+                    <div class = "RightTemp8">
+                        {{ info_forecast.temp_h8 }}°C
+                    </div>
+                    <div class = "RightIcon8">
+                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h8 }}.png" alt="Фото погоды">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="Figures">

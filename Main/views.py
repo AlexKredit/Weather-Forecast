@@ -74,6 +74,7 @@ def index(request):
         for n in range(25):
             temp_h.append(res_forecast['hourly'][n]['temp'])
             time_h.append(dt.datetime.utcfromtimestamp(res_forecast['hourly'][n]['dt'] + res_forecast['timezone_offset']))
+
         for i in range(6):
             tempMax_forecast.append(res_forecast['daily'][i]['temp']['max'])
             tempMin_forecast.append(res_forecast['daily'][i]['temp']['min'])
@@ -114,6 +115,14 @@ def index(request):
             'temp_h6': toFixed(temp_h[16]),
             'temp_h7': toFixed(temp_h[19]),
             'temp_h8': toFixed(temp_h[22]),
+            'icon_h1': toFixed(temp_h[1]),
+            'icon_h2': toFixed(temp_h[4]),
+            'icon_h3': toFixed(temp_h[7]),
+            'icon_h4': toFixed(temp_h[10]),
+            'icon_h5': toFixed(temp_h[13]),
+            'icon_h6': toFixed(temp_h[16]),
+            'icon_h7': toFixed(temp_h[19]),
+            'icon_h8': toFixed(temp_h[22]),
             'time_h1': time_h[1].strftime('%H:%M'),
             'time_h2': time_h[4].strftime('%H:%M'),
             'time_h3': time_h[7].strftime('%H:%M'),

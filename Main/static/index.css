@@ -23,6 +23,374 @@ body {
         top: -0px;
     }
 
+    .LeftRec{
+        position: absolute;
+        width: 330px;
+        height: 150px;
+        left: 175px;
+        top: 400px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+    }
+    .LeftRecInfoLeftTime{
+        position: absolute;
+        width: 136px;
+        height: 45px;
+        left: 15px;
+        top: 20px;
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        color: #eeeeee;
+        font-family: Calibri, sans-serif;
+    }
+    .LeftRecInfoRightTime{
+        position: absolute;
+        width: 136px;
+        height: 45px;
+        left: 175px;
+        top: 20px;
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        color: #eeeeee;
+        font-family: Calibri, sans-serif;
+    }
+    .RecInfo1Left{
+        position: absolute;
+        left: 40px;
+        top: 8px;
+        font-size: 25px;
+    }
+        .FullInfoLeft{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 15px;
+            top: 85px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+            .LeftTemp1{
+                position: absolute;
+                left: 15px;
+                top: 11px;
+                font-size: 20px;
+            }
+            .LeftIcon1{
+                position: absolute;
+                left: 80px;
+                top: -2px;
+            }
+    .RecInfo1Right{
+        position: absolute;
+        left: 40px;
+        top: 8px;
+        font-size: 25px;
+    }
+        .FullInfoRight{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 175px;
+            top: 85px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+            .RightTemp2{
+                position: absolute;
+                left: 15px;
+                top: 11px;
+                font-size: 20px;
+            }
+            .RightIcon2{
+                position: absolute;
+                left: 80px;
+                top: -2px;
+            }
+    .LeftCentRec{
+        position: absolute;
+        width: 330px;
+        height: 150px;
+        left: 575px;
+        top: 400px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+    }
+        .LeftCentRecInfoLeftTime{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 15px;
+            top: 20px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+            .RecInfo3LeftCent{
+                position: absolute;
+                left: 40px;
+                top: 8px;
+                font-size: 25px;
+            }
+        .FullInfoLeftCent{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 15px;
+            top: 85px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+            .LeftCentTemp3{
+                position: absolute;
+                left: 15px;
+                top: 11px;
+                font-size: 20px;
+            }
+            .LeftCentIcon3{
+                position: absolute;
+                left: 80px;
+                top: -2px;
+            }
+    .LeftCentRecInfoRightTime{
+        position: absolute;
+        width: 136px;
+        height: 45px;
+        left: 175px;
+        top: 20px;
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        color: #eeeeee;
+        font-family: Calibri, sans-serif;
+    }
+        .RecInfo4RightCent{
+            position: absolute;
+            left: 40px;
+            top: 8px;
+            font-size: 25px;
+        }
+        .FullInfoRightCent{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 175px;
+            top: 85px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+           .RightCentTemp4{
+               position: absolute;
+               left: 15px;
+               top: 11px;
+               font-size: 20px;
+           }
+           .RightCentIcon4{
+              position: absolute;
+               left: 80px;
+               top: -2px;
+           }
+    .RightCentRec{
+        position: absolute;
+        width: 330px;
+        height: 150px;
+        left: 975px;
+        top: 400px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+    }
+        .RightCentRecInfoLeftTime{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 15px;
+            top: 20px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+            .RecInfo5RightCent{
+                position: absolute;
+                left: 40px;
+                top: 8px;
+                font-size: 25px;
+            }
+        .FullInfoRightCentRight5{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 15px;
+            top: 85px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+            .RightCentTemp5{
+                position: absolute;
+                left: 15px;
+                top: 11px;
+                font-size: 20px;
+            }
+            .RightCentIcon5{
+                position: absolute;
+                left: 80px;
+                top: -2px;
+            }
+    .RightCentRecInfoRightTime{
+        position: absolute;
+        width: 136px;
+        height: 45px;
+        left: 175px;
+        top: 20px;
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        color: #eeeeee;
+        font-family: Calibri, sans-serif;
+    }
+        .RecInfo6RightCentRight{
+            position: absolute;
+            left: 40px;
+            top: 8px;
+            font-size: 25px;
+        }
+        .FullInfoRightCentRight{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 175px;
+            top: 85px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+           .RightCentTemp6{
+               position: absolute;
+               left: 15px;
+               top: 11px;
+               font-size: 20px;
+           }
+           .RightCentIcon6{
+              position: absolute;
+               left: 80px;
+               top: -2px;
+           }
+    .RightRec{
+        position: absolute;
+        width: 330px;
+        height: 150px;
+        left: 1375px;
+        top: 400px;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+    }
+    .RightRecInfoLeftTime{
+        position: absolute;
+        width: 136px;
+        height: 45px;
+        left: 15px;
+        top: 20px;
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        color: #eeeeee;
+        font-family: Calibri, sans-serif;
+    }
+    .RightRecInfoRightTime{
+        position: absolute;
+        width: 136px;
+        height: 45px;
+        left: 175px;
+        top: 20px;
+        background-color: rgba(193, 193, 193, 0.2);
+        box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        color: #eeeeee;
+        font-family: Calibri, sans-serif;
+    }
+    .RecInfo7Left{
+        position: absolute;
+        left: 40px;
+        top: 8px;
+        font-size: 25px;
+    }
+        .FullInfoRightLeft{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 15px;
+            top: 85px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+            .LeftTemp7{
+                position: absolute;
+                left: 15px;
+                top: 11px;
+                font-size: 20px;
+            }
+            .LeftIcon7{
+                position: absolute;
+                left: 80px;
+                top: -2px;
+            }
+    .RecInfo8Right{
+        position: absolute;
+        left: 40px;
+        top: 8px;
+        font-size: 25px;
+    }
+        .FullInfoRightR{
+            position: absolute;
+            width: 136px;
+            height: 45px;
+            left: 175px;
+            top: 85px;
+            background-color: rgba(193, 193, 193, 0.2);
+            box-shadow: -0px 4px 4px -0px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            color: #eeeeee;
+            font-family: Calibri, sans-serif;
+        }
+            .RightTemp8{
+                position: absolute;
+                left: 15px;
+                top: 11px;
+                font-size: 20px;
+            }
+            .RightIcon8{
+                position: absolute;
+                left: 80px;
+                top: -2px;
+            }
 .Rectangle1{
     position: absolute;
     width: 330px;
