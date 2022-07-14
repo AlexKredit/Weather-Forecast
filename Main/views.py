@@ -1,7 +1,6 @@
 import requests
 from django.shortcuts import render
 import datetime as dt
-from Main.models import City
 
 
 def first_search(request):
@@ -12,31 +11,29 @@ def toFixed(numObj, digits=0):
     return f"{numObj:.{digits}f}"
 
 
-# def get_queryset(request):
-#     query = request.GET.get('name')
-#     object_list = City.objects.order_by('name').filter(name__icontains=query)
-#     return object_list
-
-
 def get_queryset(request):
     query = request.GET.get('name')
     return query
 
 
 def index(request):
-    base_url_current = 'http://api.openweathermap.org/data/2.5/weather?q='
+    base_url_current = 'https://api.openweathermap.org/data/2.5/weather?q='
 
     appid = '053c98c9c0a3368f0e8cd2db240f3c91'
     lang = "en"
 
-    url_current = base_url_current + get_queryset(request) + '&units=metric&exclude=current' + '&lang=' + lang + '&appid=' + appid
+    url_current = base_url_current + get_queryset(request) + \
+        '&units=metric&exclude=current' + '&lang=' + lang + '&appid=' + appid
 
     for city in get_queryset(request):
         res_current = requests.get(url_current.format(city)).json()
         lat = str(res_current['coord']['lat'])
         lon = str(res_current['coord']['lon'])
+
         base_url_forecast = 'https://api.openweathermap.org/data/2.5/onecall'
-        url_forecast = base_url_forecast + '?lat=' + lat + '&lon=' + lon + '&units=metric&exclude=minutely,alerts' + '&lang=' + lang + '&appid=' + appid
+        url_forecast = base_url_forecast + '?lat=' + lat + '&lon=' + lon + \
+            '&units=metric&exclude=minutely,alerts' + '&lang=' + lang + '&appid=' + appid
+
         res_forecast = requests.get(url_forecast.format(city)).json()
         current_time = dt.datetime.utcfromtimestamp(res_current['dt'] + res_current['timezone'])
         current_time_str = current_time.strftime('%H:%M')
@@ -71,14 +68,17 @@ def index(request):
         weather_forecast = []
         temp_h = []
         time_h = []
+        icon_h = []
         for n in range(25):
             temp_h.append(res_forecast['hourly'][n]['temp'])
-            time_h.append(dt.datetime.utcfromtimestamp(res_forecast['hourly'][n]['dt'] + res_forecast['timezone_offset']))
-
+            time_h.append(dt.datetime.utcfromtimestamp(res_forecast['hourly'][n]['dt'] +
+                                                       res_forecast['timezone_offset']))
+            icon_h.append(res_forecast['hourly'][n]['weather'][0]['icon'])
         for i in range(6):
             tempMax_forecast.append(res_forecast['daily'][i]['temp']['max'])
             tempMin_forecast.append(res_forecast['daily'][i]['temp']['min'])
-            day_forecast.append(dt.datetime.utcfromtimestamp(res_forecast['daily'][i]['dt'] + res_forecast['timezone_offset']))
+            day_forecast.append(dt.datetime.utcfromtimestamp(res_forecast['daily'][i]['dt'] +
+                                                             res_forecast['timezone_offset']))
             icon_forecast.append(res_forecast['daily'][i]['weather'][0]['icon'])
             weather_forecast.append(res_forecast['daily'][i]['weather'][0]['main'])
         city_forecast_info = {
@@ -107,30 +107,31 @@ def index(request):
             'weather3': weather_forecast[3],
             'weather4': weather_forecast[4],
             'weather5': weather_forecast[5],
-            'temp_h1': toFixed(temp_h[1]),
-            'temp_h2': toFixed(temp_h[4]),
-            'temp_h3': toFixed(temp_h[7]),
-            'temp_h4': toFixed(temp_h[10]),
-            'temp_h5': toFixed(temp_h[13]),
-            'temp_h6': toFixed(temp_h[16]),
-            'temp_h7': toFixed(temp_h[19]),
-            'temp_h8': toFixed(temp_h[22]),
-            'icon_h1': toFixed(temp_h[1]),
-            'icon_h2': toFixed(temp_h[4]),
-            'icon_h3': toFixed(temp_h[7]),
-            'icon_h4': toFixed(temp_h[10]),
-            'icon_h5': toFixed(temp_h[13]),
-            'icon_h6': toFixed(temp_h[16]),
-            'icon_h7': toFixed(temp_h[19]),
-            'icon_h8': toFixed(temp_h[22]),
-            'time_h1': time_h[1].strftime('%H:%M'),
-            'time_h2': time_h[4].strftime('%H:%M'),
-            'time_h3': time_h[7].strftime('%H:%M'),
-            'time_h4': time_h[10].strftime('%H:%M'),
-            'time_h5': time_h[13].strftime('%H:%M'),
-            'time_h6': time_h[16].strftime('%H:%M'),
-            'time_h7': time_h[19].strftime('%H:%M'),
-            'time_h8': time_h[22].strftime('%H:%M'),
+            'temp_h1': toFixed(temp_h[0]),
+            'temp_h2': toFixed(temp_h[3]),
+            'temp_h3': toFixed(temp_h[6]),
+            'temp_h4': toFixed(temp_h[9]),
+            'temp_h5': toFixed(temp_h[12]),
+            'temp_h6': toFixed(temp_h[15]),
+            'temp_h7': toFixed(temp_h[18]),
+            'temp_h8': toFixed(temp_h[21]),
+            'icon_h1': icon_h[0],
+            'icon_h2': icon_h[3],
+            'icon_h3': icon_h[6],
+            'icon_h4': icon_h[9],
+            'icon_h5': icon_h[12],
+            'icon_h6': icon_h[15],
+            'icon_h7': icon_h[18],
+            'icon_h8': icon_h[21],
+            'time_h1': time_h[0].strftime('%H:%M'),
+            'time_h2': time_h[3].strftime('%H:%M'),
+            'time_h3': time_h[6].strftime('%H:%M'),
+            'time_h4': time_h[9].strftime('%H:%M'),
+            'time_h5': time_h[12].strftime('%H:%M'),
+            'time_h6': time_h[15].strftime('%H:%M'),
+            'time_h7': time_h[18].strftime('%H:%M'),
+            'time_h8': time_h[21].strftime('%H:%M'),
         }
+
         context = {'info': city_info, 'info_forecast': city_forecast_info}
         return render(request, 'Main/index.html', context)

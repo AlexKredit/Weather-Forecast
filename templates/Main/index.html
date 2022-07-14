@@ -86,8 +86,8 @@
             {{ info.city }}, {{ info.country }}
         </div>
         <div class="weatherTypeCentral">
-
-{#            <img src="{{ info.icon }}" alt="Фото погоды">#}
+            {{ info.weatherType }}
+            <img src="https://openweathermap.org/img/wn/{{ info.icon }}.png" alt="Фото погоды">
         </div>
     </div>
     <div>
@@ -103,7 +103,7 @@
                         {{ info_forecast.temp_h1 }}°C
                     </div>
                     <div class = "LeftIcon1">
-                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h1 }}.png" alt="Фото погоды">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon_h1 }}.png" alt="Фото погоды">
                     </div>
                 </div>
                 <div class = "LeftRecInfoRightTime">
@@ -116,7 +116,7 @@
                         {{ info_forecast.temp_h2 }}°C
                     </div>
                     <div class = "RightIcon2">
-                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h2 }}.png" alt="Фото погоды">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon_h2 }}.png" alt="Фото погоды">
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                         {{ info_forecast.temp_h3 }}°C
                     </div>
                     <div class = "LeftCentIcon3">
-                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h3 }}.png" alt="Фото погоды">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon_h3 }}.png" alt="Фото погоды">
                     </div>
                 </div>
                 <div class = "LeftCentRecInfoRightTime">
@@ -144,7 +144,7 @@
                         {{ info_forecast.temp_h4 }}°C
                     </div>
                     <div class = "RightCentIcon4">
-                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h4 }}.png" alt="Фото погоды">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon_h4 }}.png" alt="Фото погоды">
                     </div>
                 </div>
             </div>
@@ -159,7 +159,7 @@
                         {{ info_forecast.temp_h5 }}°C
                     </div>
                     <div class = "RightCentIcon5">
-                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h5 }}.png" alt="Фото погоды">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon_h5 }}.png" alt="Фото погоды">
                     </div>
                 </div>
                 <div class = "RightCentRecInfoRightTime">
@@ -172,7 +172,7 @@
                         {{ info_forecast.temp_h6 }}°C
                     </div>
                     <div class = "RightCentIcon6">
-                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h6 }}.png" alt="Фото погоды">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon_h6 }}.png" alt="Фото погоды">
                     </div>
                 </div>
             </div>
@@ -187,7 +187,7 @@
                         {{ info_forecast.temp_h7 }}°C
                     </div>
                     <div class = "LeftIcon7">
-                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h7 }}.png" alt="Фото погоды">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon_h7 }}.png" alt="Фото погоды">
                     </div>
                 </div>
                 <div class = "RightRecInfoRightTime">
@@ -200,7 +200,7 @@
                         {{ info_forecast.temp_h8 }}°C
                     </div>
                     <div class = "RightIcon8">
-                        <img src="https://openweathermap.org/img/wn/{{ info.icon_h8 }}.png" alt="Фото погоды">
+                        <img src="https://openweathermap.org/img/wn/{{ info_forecast.icon_h8 }}.png" alt="Фото погоды">
                     </div>
                 </div>
             </div>
@@ -371,47 +371,6 @@
                     {{ info.pressure }}&#160;mbar
                 </div>
             </div>
-{#            <div class="City_info">#}
-{#                <div class="Feels_like_temp_txt">#}
-{#                    Feels like:#}
-{#                </div>#}
-{#                <div class="Feels_like_temp">#}
-{#                    <br> {{ info.temp_feels_like }}°C <br>#}
-{#                </div>#}
-{##}
-{#                <div class="Wind_spd_info_txt">#}
-{#                    Wind speed:#}
-{#                </div>#}
-{#                <div class="Wind_spd_info">#}
-{#                    <br>{{ info.wind_speed }}m/sec <br>#}
-{#                </div>#}
-{##}
-{#                <div class="Humidity_info_txt">#}
-{#                    Humidity:#}
-{#                </div>#}
-{#                <div class="Humidity_info">#}
-{#                    <br>{{ info.humidity }}% <br>#}
-{#                </div>#}
-{##}
-{#                <div class="Pressure_info_txt">#}
-{#                    Pressure:#}
-{#                </div>#}
-{#                <div class="Pressure_info">#}
-{#                    <br>{{ info.pressure }}mbar <br>#}
-{#                </div>#}
-{#                <div class="Temp_min_txt">#}
-{#                    Temp min:#}
-{#                </div>#}
-{#                <div class="Temp_min">#}
-{#                    <br> {{ info.temp_min }}°C <br>#}
-{#                </div>#}
-{#                <div class="Temp_max_txt">#}
-{#                    Temp max:#}
-{#                </div>#}
-{#                <div class="Temp_max">#}
-{#                    <br> {{ info.temp_max }}°C <br>#}
-{#                </div>#}
-{#            </div>#}
         </div>
     </div>
 </body>
